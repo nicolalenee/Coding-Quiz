@@ -44,6 +44,20 @@ header nav a {
   font-weight: bold;
   color: var(--tertiary);
 }
+.btn {
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: 1px solid grey;
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--secondary);
+  font-size: 2.2rem;
+  border-radius: 10px;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 3px rgb(228, 206, 206);
+  margin: 10px;
+}
 /*MAIN BODY STYLING*/
 main {
   display: flex;
@@ -69,6 +83,10 @@ main {
   margin: 10px;
   color: var(--tertiary);
 }
+.hidden {
+  display: none;
+}
+
 .spacer {
   margin: 20px 0;
 }
@@ -77,17 +95,4 @@ form {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-}
-form .btn {
-  color: rgb(255, 255, 255);
-  outline: none;
-  border: 1px solid grey;
-  display: inline-block;
-  padding: 5px 10px;
-  background: var(--secondary);
-  font-size: 2.2rem;
-  border-radius: 10px;
-  position: relative;
-  top: -3px;
-  box-shadow: 0 3px rgb(228, 206, 206);
 }
