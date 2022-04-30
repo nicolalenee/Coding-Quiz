@@ -64,7 +64,16 @@ function renderQuestion() {
 function selection(option) {
   // if a user selects an incorrect answer, subtract 10 sections, then update the time display
   if (option !== questions[questionIndex].correct) {
-    alert("incorrect");
+    // $incorrectDiv = document.createElement("div");
+    // $incorrectText = document.createElement("p");
+    // $incorrectText.textContent = "Incorrect!"
+    // $incorrectText.setAttribute("class", "incorrect");
+
+    // $incorrectDiv.appendChild($incorrectText);
+    // $questionArea.appendChild($incorrectDiv);
+
+    alert("incorrect!")
+
     time -= 10;
     // if the user has neg time left set time to zero
     if ( time < 0) {
@@ -78,6 +87,7 @@ function selection(option) {
 
   // update to next question
   questionIndex++;
+
 
   // if there are no more questions, run function to render endQuiz function else run the renderQuestion function again
   if (questionIndex === questions.length) {
@@ -99,19 +109,19 @@ function endQuiz() {
   var $results = document.getElementById("results");
   $results.removeAttribute("hidden");
 
-  // click handler that updates localStorage with the new highscore information
-  var $submitScoreButton = document.getElementById("initials-submit-button");
-  $submitScoreButton.addEventListener("click", function() {
-    let savedScores = JSON.parse(localStorage.getItem("highscores")) || [];
-    let $initials = document.getElementById("initials").value;
-    var highscores = {
-      score: time,
-      initials: $initials
-    };
-    savedScores.push(highscores);
-    localStorage.setItem("highscores", JSON.stringify(savedScores))
-    window.location.href = "highscores.html"
-  })
+  // // click handler that updates localStorage with the new highscore information
+  // var $submitScoreButton = document.getElementById("initials-submit-button");
+  // $submitScoreButton.addEventListener("click", function() {
+  //   let savedScores = JSON.parse(localStorage.getItem("highscores")) || [];
+  //   let initials = document.getElementById("initials").value;
+  //   var highscores = {
+  //     score: time,
+  //     initials: initials
+  //   };
+  //   savedScores.push(highscores);
+  //   localStorage.setItem("highscores", JSON.stringify(savedScores))
+  //   window.location.href = "highscores.html"
+  // })
 };
 
 // button that starts game and click to start
